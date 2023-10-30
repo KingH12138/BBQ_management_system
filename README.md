@@ -1,0 +1,2 @@
+# BBQ_management_system
+这是一个基于springboot+vue的表白墙管理系统
