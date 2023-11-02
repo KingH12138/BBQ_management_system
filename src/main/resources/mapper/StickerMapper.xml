@@ -10,4 +10,10 @@
     <select id="SearchByKind" resultType="com.example.demo.sticker.Sticker">
         select * from sticker where kind = #{kind}
     </select>
+    <select id="SearchBySender" resultType="com.example.demo.sticker.Sticker">
+        select * from sticker where sender = #{sender}
+    </select>
+    <delete id="DeleteById">
+        delete from sticker where id=#{id}
+    </delete>
 </mapper>

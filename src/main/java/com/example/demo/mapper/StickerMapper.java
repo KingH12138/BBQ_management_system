@@ -22,4 +22,6 @@ public interface StickerMapper extends BaseMapper<Sticker> {
     List<Sticker> show_all_stickers();
     int insert_sticker(Sticker sticker);
     List<Sticker> SearchByKind(Sticker sticker);
+    List<Sticker> SearchBySender(Sticker sticker);
+    int DeleteById(Sticker sticker);
 }

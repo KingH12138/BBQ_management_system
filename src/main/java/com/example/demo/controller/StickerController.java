@@ -1,12 +1,9 @@
 package com.example.demo.controller;
 import com.example.demo.mapper.StickerMapper;
 import com.example.demo.sticker.Sticker;
+import com.example.demo.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -36,4 +33,14 @@ public class StickerController {
     public List<Sticker> search_by_kind(@RequestBody Sticker sticker){
         return stickerMapper.SearchByKind(sticker);
     }
+    @RequestMapping("/SearchBySender")    //根据发送者查找帖子
+    public List<Sticker> search_by_sender(@RequestBody Sticker sticker){
+        return stickerMapper.SearchBySender(sticker);
+    }
+    @PostMapping("/DeleteById")
+    public Integer delete_by_id(@RequestBody Sticker sticker) {
+        return stickerMapper.DeleteById(sticker);
+    }
+
+
 }
